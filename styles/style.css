@@ -1,0 +1,79 @@
+/*Base Styles*/
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font: 1rem/1.5 'Varela Round', sans-serif, Helvetica, 'Century Gothic';
+}
+
+header {
+  padding: .5em;
+}
+
+p {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: lighter;
+}
+
+h1,
+h2,
+h3 {
+  line-height: 1.3;
+  color: #3E474E;
+}
+h1{
+  font-size: 1.6rem;
+}
+
+h2 {
+  font-size: 1.25rem;
+  padding-top: 1em;
+}
+
+h3 {
+  font-size: .85rem;
+}
+
+nav {
+  padding-bottom: 15px;
+  max-width: 500px;
+  margin: auto;
+}
+
+a {
+  color: inherit;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+nav a {
+  display: block;
+  background-color: #fff;
+  margin-top: 5px;
+  padding: 10px;
+}
+
+nav a:hover {
+  background-color: #EDEDED;
+}
+
+footer {
+  font-weight: bold;
+}
+
+
+/* Media Queries -------- */
+
+@media(min-width: 768px) {
+
+
+}
+
+
+@media(min-width: 1024px) {
+
+
+}
