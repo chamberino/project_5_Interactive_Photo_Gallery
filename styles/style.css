@@ -7,36 +7,8 @@
 body {
   margin: 0;
   padding: 0;
-  font: 1rem/1.5 'Courier', sans-serif, Helvetica, 'Century Gothic';
+  font: 1rem/1.5 'Cutive Mono', monospace, sans-serif, Helvetica, 'Century Gothic';
   height: 100%;
-}
-
-header {
-  padding: .5em;
-}
-
-p {
-  font-family: 'Open Sans', sans-serif;
-  font-weight: lighter;
-}
-
-h1,
-h2,
-h3 {
-  line-height: 1.3;
-  color: #3E474E;
-}
-h1{
-  font-size: 1.6rem;
-}
-
-h2 {
-  font-size: 1.25rem;
-  padding-top: 1em;
-}
-
-h3 {
-  font-size: .85rem;
 }
 
 a {
@@ -44,26 +16,33 @@ a {
   font-weight: bold;
   text-decoration: none;
 }
-
-
-.wrapper {
-
-
+/*Search Bar Style*/
+input,
+select,
+textarea
+{
+  background: rgba(255,255,255,0.1);
+  border: 2px solid #e0e0e0;
+  border-radius: 5px;
+  display: block;
+  font-size: 16px;
+  height: 42px;
+  margin: auto;
+  outline: 0;
+  padding: 15px;
+  width: 37%;
+  color: #8e8e8e;
+  margin-top: 2em;
+  transition: all .25s ease-out;
 }
-
+/*Flexbox Style*/
 .flex-container {
 margin: 2em 0;
 display: flex;
 flex-direction: column;
 align-items: center;
-justify-content: center;
+justify-content: space-around;
 }
-
-.flex-item {
-  /* margin: auto; */
-}
-
-
 .flex-item img {
   max-width: 100%;
   padding-bottom: 1em;
@@ -74,14 +53,12 @@ justify-content: center;
   display: block;
 }
 
-
 /* Media Queries -------- */
-
-@media(min-width: 580px) {
+@media(min-width: 624px) {
 
   .flex-item img {
-    width:230px;
-    height:230px;
+    width:280px;
+    height:280px;
   }
   .flex-container {
     display: inline-flex;
@@ -95,34 +72,60 @@ justify-content: center;
   }
 }
 
-
 @media(min-width: 768px) {
 
   .flex-item {
       flex: 1 33%;
   }
   .flex-container {
-    margin-right: 6em;
-    margin-left: 6em;
+    margin-right: 3em;
+    margin-left: 3em;
   }
-
-
+  .flex-item img {
+    width:200px;
+    height:200px;
+  }
 }
-
 
 @media(min-width: 1180px) {
 
   .flex-item {
       flex: 1 25%;
+      margin-left: 0;
+      margin-right: 0;
   }
-
   .flex-container {
     margin-right: 8em;
     margin-left: 8em;
   }
+}
+/* LIGHTBOX STYLES-------- */
 
-  .flex-item img {
-    width:200px;
-    height:200px;
+.lightbox .lb-image {
+  border: none;
+  border-radius: 0;
+}
+.lb-data .lb-caption {
+  width: 95%;
+  display: block;
+  padding-top: 4em;
+  padding-left: 2em;
+  font-size: 16px;
+}
+
+.hideMe {
+  display: none;
+  order: 100;
+}
+
+@media(min-width: 624px) {
+  .lb-data .lb-caption {
+    width: 600px;
+  }
+}
+
+@media(min-width: 768px) {
+  .lb-data .lb-caption {
+    padding-left: 85px;
   }
 }
