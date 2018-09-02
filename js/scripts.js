@@ -7,21 +7,17 @@ lightbox.option({
       wrapAround: true,
     })
 
-//Add event listener
-search.addEventListener('keyup', filterImages);
 
 //This function hides images that don't match search input
-function filterImages() {
+const filterImages = () => {
   let filterValue, images, caption, i;
   // Get input value
   filterValue = document.getElementById('search').value.toUpperCase();
   //get images array
   images = document.getElementsByClassName("flex-item");
-
   //Loop through captions
   for(let i=0; i<images.length; i++) {
     caption = images[i].getAttribute("data-title");
-    console.log(caption)
     //If matched
     if (caption.toUpperCase().indexOf(filterValue) > -1) {
       images[i].style.display= '';
@@ -30,3 +26,6 @@ function filterImages() {
     }
   }
 }
+
+//Add event listener
+search.addEventListener('keyup', filterImages);
